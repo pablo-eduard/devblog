@@ -14,5 +14,7 @@ class Artigo(models.Model):
 
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
+    autor = models.CharField(max_length=50, default="Admin")
+
     def __str__(self):
         return self.titulo
